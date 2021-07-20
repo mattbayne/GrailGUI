@@ -10,7 +10,7 @@ C CXX)
 set(CMAKE_BINARY_DIR ${PROJECT_SOURCE_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/libs)
-set(CMAKE_FILES_DIRECTORY build) 
+set(CMAKE_FILES_DIRECTORY build)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/modules)
 set(CMAKE_CXX_STANDARD 20)
 option(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,6 +20,7 @@ option(CMAKE_LINK_WHAT_YOU_USE ON)
 option(GRAIL_EXPERIMENTAL ON)
 set(CMAKE_DEBUG_POSTFIX d)
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+
 
 string(TOLOWER "${CMAKE_BUILD_TYPE}" build_type_lower)
 
@@ -86,6 +87,16 @@ FetchContent_GetProperties(glm)
 if(NOT glm_POPULATED)
     FetchContent_Populate(glm)
 endif()
+
+# fmtlib
+# This will eventually be merged into C++20 as std::format, but for now this is using fmtlib
+FetchContent_Declare(
+    fmt
+    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+    GIT_TAG        d141cdbeb0fb422a3fb7173b285fd38e0d1772dc # v8.0.1
+    SOURCE_DIR     ${PROJECT_SOURCE_DIR}/external/fmt
+)
+FetchContent_MakeAvailable(fmt)
 
 # Shapelib
 # Currently manually compiled due to compiler warnings

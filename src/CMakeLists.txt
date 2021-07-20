@@ -50,6 +50,9 @@ if(${MPV_FOUND})
   target_include_directories(grail INTERFACE ${MPV_INCLUDE_DIR})
 endif()
 
+# fmtlib
+target_link_libraries(grail fmt::fmt)
+
 # Shapelib
 target_link_libraries(grail shpgrail)
 
