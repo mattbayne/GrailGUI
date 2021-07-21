@@ -25,6 +25,8 @@ add_grail_executable(SRC testText3.cc LIBS grail)
 add_grail_executable(SRC testWidgets.cc LIBS grail)
 add_grail_executable(SRC ../src/csp/GenericXDLClient.cc LIBS grail)
 add_grail_executable(SRC testPopupMenu.cc LIBS grail)
+add_grail_executable(SRC testfmt.cc LIBS grail)
+
 if(${MPV_FOUND})
   add_grail_executable(SRC testAudio.cc LIBS grail)
   add_grail_executable(SRC testVideo.cc LIBS grail)
