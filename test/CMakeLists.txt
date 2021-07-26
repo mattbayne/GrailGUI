@@ -1,7 +1,7 @@
 add_subdirectory(data)
 
 # add_grail_executable([BINNAME <binary name>] SRC <src path> LIBS <libs>)
-#add_grail_executable(SRC ESRIMapDemo.cc LIBS grail)
+# add_grail_executable(SRC ESRIMapDemo.cc LIBS grail)
 add_grail_executable(SRC JoeyDemo.cc LIBS grail)
 add_grail_executable(SRC MapDemo.cc LIBS grail)
 add_grail_executable(SRC StockDemo.cc LIBS grail)
@@ -26,6 +26,9 @@ add_grail_executable(SRC testWidgets.cc LIBS grail)
 add_grail_executable(SRC ../src/csp/GenericXDLClient.cc LIBS grail)
 add_grail_executable(SRC testPopupMenu.cc LIBS grail)
 add_grail_executable(SRC testfmt.cc LIBS grail)
+add_grail_executable(SRC testStats.cc LIBS grail)
+# add_grail_executable(BINNAME testSolar SRC DrawNASAEphemerisSolarSystem2d.cc
+# LIBS grail)
 
 if(${MPV_FOUND})
   add_grail_executable(SRC testAudio.cc LIBS grail)
