@@ -32,6 +32,20 @@ double magsq() const {
   return x*x+y*y+z*z;
 }
 
+friend Vec3D operator/ (const Vec3D& a, double s) {
+  return Vec3D(a.x/s, a.y/s, a.z/s);
+}
+
+Vec3D normalized() {
+  return *this/this->mag();
+}
+
+Vec3D cross(Vec3D a) {
+  return Vec3D(y * a.z - z * a.y,
+                z * a.x - x * a.z,
+                x * a.y - y * a.x);
+}
+
 double dot(const Vec3D& b) const {
 return x * b.x + y * b.y + z * b.z;
 }

@@ -1,4 +1,4 @@
-#include "CAD/Curve.cc"
+#include "CAD/Curve.hh"
 #include "iostream"
 #include "CAD/Vec3d.hh"
 using namespace std;
@@ -21,3 +21,4 @@ int main() {
 }
 
 //class TestCurve : public GLWin {
+
