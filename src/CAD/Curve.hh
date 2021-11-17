@@ -7,7 +7,7 @@
 /**
 Represent -- 
 **/
-class Curve  {
+class Curve {
   protected:
     std::vector<Vec3D> points;
   
@@ -24,15 +24,13 @@ class Curve  {
  // virtual Vec3D getTangent(double step) = 0; //virtual replaces "abstract" from java
   
   // Overload the << operator
-  friend ostream& operator<< (ostream& s, const Curve& c){
+  friend std::ostream& operator<< (ostream& s, const Curve& c){
     for (int i = 0; i < c.points.size(); i++){
       s << c.points[i] << ",";
     }
     return s;
   }
   
-  
-  
-  //TODO: Transformation getMatrix(double step); //implement Transformation/import for now but function/constructor is different
+  //Transformation getMatrix(double step); //implement Transformation/import for now but function/constructor is different
 };
 

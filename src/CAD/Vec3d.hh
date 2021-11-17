@@ -55,9 +55,10 @@ double dot(const Vec3D& a, const Vec3D& b){
 return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 // Overload the << operator
-ostream& operator<< (ostream& s, const Vec3D& v){
-return s << "(" << v.x <<"," << v.y << "," << v.z <<")";
+std::ostream& operator<< (ostream& s, const Vec3D& v){
+return s << "(" << v.x <<"," << v.y << "," << v.z << ")";
 }
+
 // Overload the >> operator
 istream& operator>> (istream& s, Vec3D& v){
 return s >> v.x >> v.y >> v.z;
