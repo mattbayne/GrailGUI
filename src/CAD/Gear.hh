@@ -14,6 +14,6 @@ public:
 
   void init();
   void render();
-  void drawCircle();
+  void drawGear();
 
 };
