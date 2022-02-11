@@ -28,7 +28,6 @@ void Circle2D::init() {
   {
     circleVertX[i] = x +  (radius * cos( i * (2 * pi / numOfTriangles)));
     circleVertY[i] = y +  (radius * sin( i * (2 * pi / numOfTriangles)));
-
   }
 
   //GLfloat allV[vertecies*2];
